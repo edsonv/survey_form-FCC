@@ -22,3 +22,25 @@
 * You can build your project by forking this [CodePen pen](https://codepen.io/freeCodeCamp/pen/MJjpwO). Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 * Once you're done, submit the URL to your working project with all its tests passing.
 * Remember to use the [Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514) method if you get stuck.
+
+## Haciendo Fork a este proyecto
+Puedes descargar este proyecto en tu disco duro y ejecutar Webpack con las configuraciones de desarrollo predeterminadas y los plugins instalados.
+
+```
+npm run build
+```
+Este comando creará la carpeta *dist* en el directorio raiz del proyecto, y su contenido serán los archivos funcionales del proyecto, es decir, los archivos en estado de producción.
+
+## Editando el Fork
+Si deseas editar el proyecto, puedes aprovechar los beneficios de la configuración de desarrollo de Webpack incluidas ejecutando:
+
+```
+npm run dev
+```
+Esto activará el servidor de desarrollo de Webpack.
+
+## Por hacer
+  - Mejorar las configuraciones de desarrollo Webpack.
+  - Incluir configuraciones de producción optimizadas.
+
+**Este proyecto es un Fork de FCC**
