@@ -24,7 +24,7 @@
 * Remember to use the [Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514) method if you get stuck.
 
 ## Haciendo Fork a este proyecto
-Puedes descargar este proyecto en tu disco duro y ejecutar Webpack con las configuraciones de desarrollo predeterminadas y los plugins instalados.
+Puedes descargar este proyecto en tu disco duro y ejecutar Webpack con las configuraciones de producción predeterminadas.
 
 ```
 npm run build
