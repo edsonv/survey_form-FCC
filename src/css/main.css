@@ -3,6 +3,7 @@
   --inner_bg-font: #FFF;
   --input-border-color: #4585AD;
   --submit-bg: #50AD5F;
+  --required: #FF0000;
 }
 body {
   font-family: 'Raleway', system-ui;
@@ -88,7 +89,10 @@ ul {
   list-style: none;
 }
 
-sup {
-  font-size: 1em;
-  color: red;
+span::before {
+  content: '*';
+  color: var(--required);
+  font-size: 1.5em;
+  line-height: 0.5em;
+  vertical-align: bottom;
 }
