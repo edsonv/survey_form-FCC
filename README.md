@@ -24,10 +24,11 @@
 * Remember to use the [Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514) method if you get stuck.
 
 ## Haciendo Fork a este proyecto
-Puedes descargar este proyecto en tu disco duro y ejecutar Webpack con las configuraciones de producción predeterminadas.
+Puedes descargar este proyecto en tu disco duro, instalar las dependecias de desarrollo  y ejecutar Webpack con las configuraciones de producción predeterminadas.
 
 ```
-npm run build
+$npm install
+$npm run build
 ```
 Este comando creará la carpeta *dist* en el directorio raiz del proyecto, y su contenido serán los archivos funcionales del proyecto, es decir, los archivos en estado de producción.
 
@@ -35,12 +36,8 @@ Este comando creará la carpeta *dist* en el directorio raiz del proyecto, y su 
 Si deseas editar el proyecto, puedes aprovechar los beneficios de la configuración de desarrollo de Webpack incluidas ejecutando:
 
 ```
-npm run dev
+$ npm run dev
 ```
 Esto activará el servidor de desarrollo de Webpack.
-
-## Por hacer
-  - Mejorar las configuraciones de desarrollo Webpack.
-  - Incluir configuraciones de producción optimizadas.
 
 **Este proyecto es un Fork de FCC**
