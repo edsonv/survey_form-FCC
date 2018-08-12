@@ -23,7 +23,7 @@ module.exports = {
       },
       browsers: 'last 2 versions'
     }),
-    //require('css-mqpacker'),
-    //require('cssnano'),
+    require('css-mqpacker'),
+    require('cssnano'),
   ]
 }

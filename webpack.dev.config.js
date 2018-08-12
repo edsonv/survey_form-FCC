@@ -1,18 +1,24 @@
-const webpack = require('webpack')
-const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const devMode = process.env.NODE_ENV !== 'production'
+const path = require('path')
+//const webpack = require('webpack')
+const WriteFilePlugin = require('write-file-webpack-plugin')
+// const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   mode: 'development',
+  entry:path.resolve(__dirname, 'src/js/index.js'),
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].js'
+  },
   devServer: {
-    contentBase: path.join(__dirname,'dist'),
-    watchContentBase: true,
+    // contentBase: path.join(__dirname,'src'),
+    // watchContentBase: true,
     compress: true,
-    port:9000,
     open: true,
-    hot: true
+    overlay: true,
+    port:9000,
   },
   module: {
     rules: [
@@ -28,9 +34,8 @@ module.exports = {
     {
       test: /\.css$/,
       use: [
-      devMode ? 'style-loader' : MiniCSSExtractPlugin.loader,
-        //'style-loader',
-        //MiniCSSExtractPlugin.loader,
+        'style-loader',
+        MiniCSSExtractPlugin.loader,
         'css-loader',
         {
           loader: 'postcss-loader',
@@ -45,14 +50,15 @@ module.exports = {
       ]
     },
     plugins: [
+    new WriteFilePlugin({
+      test: /^(?!.*(hot)).*/,
+    }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-    //filename: './index.html'
-  }),
-    new webpack.HotModuleReplacementPlugin(),
+      template: path.resolve(__dirname, './src/index.html')
+    }),
     new MiniCSSExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
-    })
+      filename: 'css/[name].css',
+      chunkFilename: '[id].css'
+    }),
     ]
   }
